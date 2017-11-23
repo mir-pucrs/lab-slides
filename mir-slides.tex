@@ -1,0 +1,135 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{colortbl}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{letltxmacro}
+\usepackage[noend]{algorithm, algpseudocode}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{pgfplots}
+
+\usepackage{mathtools}
+\newcommand\myeq{\stackrel{\mathclap{\normalfont\mbox{def}}}{=}}
+
+\newcommand{\idest}{{\it i.e.}}
+\newcommand{\exemp}{{\it e.g.}}
+\newcommand{\etc}{{\it etc.}}
+\newcommand{\etal}{{\it et al.}}
+
+\logo{\includegraphics[height=01cm]{fig/mir-logo.pdf}}
+
+\lstdefinelanguage
+{PDDL}[]{LISP}
+{alsoletter={:,?}, 
+morekeywords={define,domain,problem,:domain,:extends,:requirements,:strips,:equality,:typing,:conditional-effects,:strips,:types,:objects,:negative-preconditions,:disjunctive-preconditions,:existential-preconditions,:universal-preconditions, :constants,:domain-variables,:timeless,:domain-axioms,:action-expansions,:predicates,:action,:parameters,:precondition,:effect,:fluents,:primary-effect,:side-effect,:init,:goal,when,not,forall,exists,goal-type,choice,forsome,in-context}}
+%[[⟨list of required aspects (keywordcomments,texcs,etc.)⟩]]
+
+\lstdefinelanguage
+{SHOP}[]{LISP}
+{alsoletter={:,?,!}, 
+morekeywords={defdomain,defproblem,:domain,:method,:operator
+:goal,when,not,forall,exists,goal-type,choice,forsome,in-context}}
+
+
+\lstset{language=PDDL}
+
+\newcommand{\todo}[1]{ {\color{red} #1} }
+
+\def\masterclass{1}
+% \def\masterclass{0}
+
+\usetheme{Madrid}
+\usecolortheme{seagull}
+\title[\fontsize{0.08cm}{1em}\selectfont Plan and Goal Recognition]{Plan and Goal Recognition \\ SICSA DVF Master Class}
+\author[F. Meneguzzi]{Felipe Meneguzzi
+}
+\institute[MIR]{Machine Intelligence and Robotics
+\\
+\url{felipe.meneguzzi@pucrs.br}
+}
+\date{Porto Alegre, November, 2017}
+
+\setbeamertemplate{subsection page}
+{
+    \begingroup
+    \begin{beamercolorbox}[sep=12pt,center]{section title}
+        \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+    \vspace*{10pt}
+    \begin{beamercolorbox}[sep=8pt,center]{subsection title}
+        \usebeamerfont{subsection title}\insertsubsection\par
+    \end{beamercolorbox}
+    \endgroup
+}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+  \frame{\subsectionpage}
+}
+
+\begin{document}
+
+%---------------------------------------------------------------------------------
+
+    \begin{frame}
+        \titlepage
+    \end{frame}
+    
+%---------------------------------------------------------------------------------
+\section{Introduction}
+
+\subsection[Motivation]{Motivation and Intuition}
+	% \begin{frame}[c]\frametitle{Tentative Structure}
+% 		\begin{itemize}
+% 			\item Introduction to plan recognition (from Automated Planning)
+% 			\item Goal recognition heuristics
+% 			\item Hybrid goal recognition heuristics (ask Mor)
+% 			\item Optimality monitoring and applications
+% 			\item Recognizing plans using real-time video data
+% 			\item Future work
+% 		\end{itemize}
+% 	\end{frame}
+
+	\begin{frame}[c]\frametitle{Overview}
+		\begin{itemize}
+			\item Recognizing plans and goals of others is a critical ability for intelligent interaction:
+			\begin{itemize}
+				\item important for humans/agents working in the same environment
+				\item increasingly important as we build more intelligent systems
+			\end{itemize}
+			\item Overall area of Plan, Activity and Intent Recognition
+			\begin{itemize}
+				\item Activity recognition: recognizing meaningful activities from low-level sensor data
+				\item Plan/Intent/Goal recognition: recognizing intentional higher-level sequences of activities 
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+
+
+	{
+	\setbeamercolor{background canvas}{bg=lightgray}
+    \begin{frame}{}
+    		\centering
+    		Thank you!
+			\\
+    \end{frame}
+    }
+
+%---------------------------------------------------------------------------------
+
+\end{document}
